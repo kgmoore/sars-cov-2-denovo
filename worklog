@@ -1,0 +1,24 @@
+
+**** Sat Jun  5 07:11:39 UTC 2021 ****
+
+installed samtools 
+git clone git@github.com:samtools/samtools.git
+need to configure with --no-ncurses
+otherwise worked fine
+
+Data source
+Using this tutorial: https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/sars-cov-2/tutorial.html
+We are chasing SRR11954102
+This can be downloaded from s3 cp https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR11954102/MA_MGH_00250.lERCC_00025_RandomHexamer_NexteraXT_RNA_311243302_cDNA_355003635_LIB_334376936.cleaned.bam.1
+
+What's in the data?
+call samtools stats 
+This is an UNREFERENCED bam file. It's basically a refomatted FASTQ file
+There are 2923020 reads
+Thare are all marked as paired end reads
+the length of all of them is 101
+total of 295225020 bases
+There are only 30000 bases in the Covid Genome, so we have 9840x coverage from this one sample
+
+How to denovo this?
+ NEXT TIME!!!
